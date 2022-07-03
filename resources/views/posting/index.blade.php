@@ -12,7 +12,7 @@
                         <a href="{{ route ('add-posting') }}" class="btn btn-primary">tambah</a>
                     </p>
                     <div class="table-responsive pt-3">
-                        <table class="table table-bordered">
+                        <table class="table table-bordered" id="myTable">
                             <thead>
                                 <tr>
                                     <th>
@@ -49,7 +49,7 @@
                                     <td>{{$posting->judul}}</td>
                                     <td>{{$posting->topik}}</td>
                                     <td>
-                                        <img src="{{ asset('storage/' .$posting->gambar)}}" width="300" srcset="">
+                                        <img src="{{ asset('storage/' .$posting->gambar)}}" width="100" srcset="">
                                     </td>
                                     <td>{{$posting->isi}}</td>
                                     <td>{{$posting->preview}}</td>

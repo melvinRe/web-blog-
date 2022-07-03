@@ -35,7 +35,7 @@
             </div>
         </nav>
         <!-- Page Header-->
-        <header class="masthead" style="background-image: url('../images/890022.jpg')">
+        <header class="masthead" style="background-image: url('assets/img/home-bg.jpg')">
             <div class="container position-relative px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
@@ -52,16 +52,16 @@
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
                     <!-- Post preview-->
-                    @foreach ($data as $posting)                   
+                    @foreach ($data as $spesifik)                   
                     <div class="post-preview">
-                        <a href="{{ route('single', $posting->id)}}">
-                            <h2 href="" class="post-title">{{ $posting->judul}}</h2>
-                            <h4>{{$posting->topik}}</h4>
-                            <h3 class="post-subtitle">{{ $posting->preview}}</h3>
+                        <a href="">
+                            <h2 href="" class="post-title"></h2>
+                            <h4>tes</h4>
+                            <h3 class="post-subtitle"></h3>
                         </a>
                         <p class="post-meta">
                             Posted by
-                            <a href="#!">{{ $posting->user->name }}</a>                            
+                            <a href="#!"></a>                            
                         </p>
                     </div>
                     @endforeach

@@ -58,8 +58,8 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
-                        <p>{{$data->isi}}</p>
-                        <img src="{{ asset('storage/' .$data->gambar)}}" width="500" srcset="">
+                        <img src="{{ asset('storage/' .$data->gambar)}}" width="600" srcset="">
+                        <p>{{$data->isi}}</p>               
                         <p>
                             Placeholder text by
                             <a href="http://spaceipsum.com/">Space Ipsum</a>

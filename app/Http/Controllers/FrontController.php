@@ -14,7 +14,7 @@ class FrontController extends Controller
 { //function index untuk menampilkan seluruh berita
     public function index()
     {
-        $data = Posting::all();
+        $data = Posting::with(['user'])->orderBy('created_at','DESC')->get();
 
         return view('welcome', compact('data'));
     }
@@ -91,5 +91,16 @@ class FrontController extends Controller
         $topik = Posting::with(['user'])->groupBy('topik')->orderBy('created_at','DESC')->get();
 
         return view('spesifik', compact('konfigurasi','topik', 'data'));
+    }
+
+    public function recent()
+    {
+        $data = Posting::with(['user'])->orderBy('created_at','DESC')->get();
+       // $post = $data->get();
+
+        $konfigurasi = Konfigurasi::first();
+        // $recent = Posting::with(['user'])->orderBy('created_at','DESC')->get();
+
+        return view('recent', compact('konfigurasi','data'));
     }
 }
