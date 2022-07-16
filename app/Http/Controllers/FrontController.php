@@ -67,7 +67,9 @@ class FrontController extends Controller
                 
             ]);
 
-            return redirect('kontak');
+            return redirect('kontak')->with([
+                'success' => "behasil"
+            ]);
         } catch (Exception $error) {
             return redirect()->back()->with([
                 'failed' => $error->getMessage()
@@ -102,5 +104,10 @@ class FrontController extends Controller
         // $recent = Posting::with(['user'])->orderBy('created_at','DESC')->get();
 
         return view('recent', compact('konfigurasi','data'));
+    }
+
+    public function archive()
+    {
+        
     }
 }
